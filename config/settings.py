@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'fd&a%**+le-74cq&mrlh^a0yp95!n5vf-q5u3+5f*9=6at1c2^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -57,8 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-    'crum.CurrentRequestUserMiddleware',
+    'crum.CurrentRequestUserMiddleware'
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -143,5 +142,16 @@ AUTH_USER_MODEL = 'user.User'
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
 
-STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
+# Email
 
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_PORT = 587
+
+EMAIL_HOST_USER = 'djangologin99@gmail.com'
+
+EMAIL_HOST_PASSWORD = '0m4gATi3rr@'
+
+DOMAIN = ''
+
+IMPORT_EXPORT_USE_TRANSACTIONS = True
