@@ -26,7 +26,7 @@ SECRET_KEY = 'fd&a%**+le-74cq&mrlh^a0yp95!n5vf-q5u3+5f*9=6at1c2^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -84,8 +84,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-#DATABASES = db.SQLITE
-#IMPORT_EXPORT_USE_TRANSACTIONS = True
+DATABASES = db.SQLITE
+IMPORT_EXPORT_USE_TRANSACTIONS = True
 import dj_database_url
 from decouple import config
 DATEBASES{
