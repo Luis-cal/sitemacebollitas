@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'fd&a%**+le-74cq&mrlh^a0yp95!n5vf-q5u3+5f*9=6at1c2^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -86,14 +86,6 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = db.SQLITE
 IMPORT_EXPORT_USE_TRANSACTIONS = True
-import dj_database_url
-from decouple import config
-DATEBASES{
-    'default': dj_database_url.config(
-        default= config('DATABASE_URL')
-    )
-
-}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
