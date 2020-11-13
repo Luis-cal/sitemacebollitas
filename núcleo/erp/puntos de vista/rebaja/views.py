@@ -19,12 +19,7 @@ from core.erp.forms import SaleForm
 from core.erp.mixins import ValidatePermissionRequiredMixin
 from core.erp.models import Sale, Product, DetSale
 
-results = []
-with open('C:/Users/rocio/Desktop/p.csv') as File:
-    reader = csv.DictReader(File)
-    for row in reader:
-        results.append(row)
-    print (results)
+
  
 
 
